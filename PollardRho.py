@@ -32,18 +32,18 @@ def pollard(n,c):
     
     return g
 
-
+def factor(n):
+    while pollard(n,1) != "prime probable" : 
+        p = pollard(n,1)
+        while pollard(p,1) != "prime probable":
+            p = pollard(p,1)
+        print(p)
+        n = n/p
+    return n
 
 n = 2**29 - 1
-p = (pollard(n,1))
-print(p)
-q = pollard(p,1)
-print(q)
-print(pollard(q,1))
-n = int(n/q)
-p = pollard(n,1)
-print(p)
-while (pollard(p,1) != "prime probable"):
-    p = pollard(p,1)
-    print(p)
-print(pollard(p,1))
+print(factor(n))
+n = 2**59 - 1
+print(factor(n))
+n = 400731052007683
+print(factor(n))
