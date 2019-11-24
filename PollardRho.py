@@ -33,11 +33,17 @@ def pollard(n,c):
     return g
 
 
-c = 1
-#n = int(input(" n = ? "))
+
 n = 2**29 - 1
-p = (pollard(n,c))
+p = (pollard(n,1))
 print(p)
 q = pollard(p,1)
 print(q)
 print(pollard(q,1))
+n = int(n/q)
+p = pollard(n,1)
+print(p)
+while (pollard(p,1) != "prime probable"):
+    p = pollard(p,1)
+    print(p)
+print(pollard(p,1))
