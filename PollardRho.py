@@ -38,12 +38,12 @@ def factor(n):
         while pollard(p,1) != "prime probable":
             p = pollard(p,1)
         print(p)
-        n = n/p
+        n = int(n/p)
     return n
 
 n = 2**29 - 1
 print(factor(n))
-n = 2**59 - 1
-print(factor(n))
+#n = 2**59 - 1
+#print(factor(n))
 n = 400731052007683
 print(factor(n))
