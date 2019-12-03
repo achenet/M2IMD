@@ -41,9 +41,9 @@ def factor(n):
         n = int(n/p)
     return n
 
-n = 2**29 - 1
-print(factor(n))
-#n = 2**59 - 1
+#n = 2**29 - 1
 #print(factor(n))
-n = 400731052007683
+n = 2**59 - 1
 print(factor(n))
+#n = 400731052007683
+#print(factor(n))
