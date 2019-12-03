@@ -2,8 +2,6 @@
 #the prime factorization of n
 
 #n is written as a tuple of its prime factors
-
-
 def orders391():
     orders = {}
     for i in range(1,17):
@@ -15,15 +13,29 @@ def orders391():
     return orders
                
     
-orders = orders391()
+o = orders391()
 
+def baseRel(o):
+    rel = []
+    for i in (0,1,2,4,8,11,16,22,44,88,(16*11),(32*11)):
+        for j in (0,1,2,4,8,11,16,22,44,88,(16*11),(32*11)):
+            for k in (0,1,2,4,8,11,16,22,44,88,(16*11),(32*11)):
+                if ((2**i * 3**j * 5**k)%17, (2**i * 3**j * 5**k)%23) == (1,1):
+                    rel.append((i,j,k))
+    return rel
 
-for i in orders.keys() :
-    if orders[i] == 2 or orders[i] == 11:
-        print(i)
+print(baseRel(o))
 
+#for i in o.keys() :
+ #   if o[i] == 11 :
+       # print(i)
 
-n = (13,17)
+#print(o[(2,2)])
+#print(o[(3,3)])
+#print(o[(5,5)])
+#print(o[(10,10)])
+#print(o[(15,15)])
+
 
 
 
