@@ -24,18 +24,18 @@ def baseRel(o):
                     rel.append((i,j,k))
     return rel
 
-print(baseRel(o))
+rel = baseRel(o)
+#print(rel)
 
-#for i in o.keys() :
- #   if o[i] == 11 :
-       # print(i)
-
-#print(o[(2,2)])
-#print(o[(3,3)])
-#print(o[(5,5)])
-#print(o[(10,10)])
-#print(o[(15,15)])
-
+def reduceRel(o):
+    base = []
+    for i in rel:
+        if 0 in i:
+            base.append(i)
+            rel.remove(i)
+    for i in rel:
+        for j in range(len(rel)):
+            if 
 
 
 
