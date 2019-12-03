@@ -2,6 +2,8 @@
 #the prime factorization of n
 
 #n is written as a tuple of its prime factors
+
+
 def orders391():
     orders = {}
     for i in range(1,17):
@@ -13,10 +15,12 @@ def orders391():
     return orders
                
     
-print(orders391())
+orders = orders391()
 
 
-
+for i in orders.keys() :
+    if orders[i] == 2 or orders[i] == 11:
+        print(i)
 
 
 n = (13,17)
