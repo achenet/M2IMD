@@ -14,6 +14,9 @@ def orders391():
                
     
 o = orders391()
+for i in o:
+    if o[i] == 11:
+        print(i)
 
 def baseRel(o):
     rel = []
@@ -24,15 +27,16 @@ def baseRel(o):
                     rel.append((i,j,k))
     return rel
 
-rel = baseRel(o)
+#rel = baseRel(o)
 #print(rel)
 
 def reduceRel(rel):
     base = []
     for i in rel:
-        if 0 in i:
+        if i[0] == 0 or i[1] == 0 or i[2] == 0:
             base.append(i)
             rel.remove(i)
+            print(i)
     #we'll need to treat the case where one or more exponents is zero
     for i in rel:
         for j in rel:
@@ -40,6 +44,6 @@ def reduceRel(rel):
                 rel.remove(i)
     return rel
 
-print(reduceRel(rel))
+#print(reduceRel(rel))
 
 
