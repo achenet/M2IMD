@@ -27,16 +27,19 @@ def baseRel(o):
 rel = baseRel(o)
 #print(rel)
 
-def reduceRel(o):
+def reduceRel(rel):
     base = []
     for i in rel:
         if 0 in i:
             base.append(i)
             rel.remove(i)
+    #we'll need to treat the case where one or more exponents is zero
     for i in rel:
-        for j in range(len(rel)):
-            if 
+        for j in rel:
+            if i[0]%j[0]==0 and i[1]%j[1]==0 : 
+                rel.remove(i)
+    return rel
 
-
+print(reduceRel(rel))
 
 
