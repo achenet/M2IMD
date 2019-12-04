@@ -14,10 +14,11 @@ def extEuclid(a,b):
         q = int(r1/r2)
         r3 = r1%r2
         (r1,s1,t1,r2,s2,t2) = (r2,s2,t2,r3,s1-q*s2,t1-q*t2)
+    print(r1,s1,t1)
     return r1,s1,t1
 
 
-a = int(raw_input("a = "))
-b = int(raw_input("b = "))
-print(extEuclid(a,b))
+#a = int(raw_input("a = "))
+#b = int(raw_input("b = "))
+#print(extEuclid(a,b))
 
