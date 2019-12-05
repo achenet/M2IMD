@@ -14,9 +14,9 @@ def orders391():
                
     
 o = orders391()
-#for i in o:
-#    if o[i] == 16:
-#        print(i)
+for i in o:
+    if o[i] == 4:
+        print(i)
 
 def baseRel(o):
     rel = []
@@ -28,7 +28,7 @@ def baseRel(o):
     return rel
 
 def multZ17():
-    l = [3,5,6,7,10,11,12,14]
+    l = [2,8,9,15]
     for i in l:
         for j in l:
             if (i*j)%17 in l:

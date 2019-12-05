@@ -16,7 +16,7 @@ def modInv(a,n):
         s = n + s
     return s
 
-print(modInv(3,7))
+#print(modInv(3,7))
 
 def effCRT(la,ln):
     n = 1
@@ -33,15 +33,14 @@ def effCRT(la,ln):
 
 
 
-#k = int(raw_input("how many integers are we using?")
 #la is the list of a1,...,ak 
 #ln is the list of n1,...,nk
-la = [1,2]
+la = []
 ln = [17,23]
+for i in [3,5,6,7,10,11,1214]:
+    for j in [1,22]:
+        print(effCRT([i,j],ln))
 
-print(effCRT(la,ln))
-#for i in range(k):
-#    la.append(int(raw_input("value of a_"+str(i))))
-#    ln.append(int(raw_input("value of n_"+str(i))))
+
 
 
